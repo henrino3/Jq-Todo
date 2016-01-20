@@ -13,12 +13,12 @@ $( document ).ready(function() {
             			var i, random;
             			var uuid = '';
 
-            			for (i = 0; i < 32; i++) {
+            			for (i = 0; i < 5; i++) {
             				random = Math.random() * 16 | 0;
             				if (i === 8 || i === 12 || i === 16 || i === 20) {
             					uuid += '-';
             				}
-            				uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(5);
+            				uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
             			}
                   console.log(uuid+ " Generated");
             			return uuid;
@@ -90,13 +90,12 @@ $( document ).ready(function() {
 
         appendTodo : function(todo, status){
           //APPEND TO APPROPRIATE STATUS VIEW
-          data = "<li><div class='row' id='"+todo.id+"'><div class='col-md-6 task'>"+
+          data = "<li><div class='row' id='"+todo.id+"'><div class='col-md-8 task'>"+
                  todo.title+" <span class='label label-default'>"+todo.StartDate+"</span> - "+
                  "<span class='label label-default'>"+todo.StopDate+"</span> "+
-                 "</div><div class='col-md-2 action edit'><i class='fa fa-pencil-square-o'></i></div>"+
-                 "<div class='col-md-2 action delete' ><i class='fa fa-remove'></i></div>"+
-                 "<div class='col-md-2 action view'><i class='fa fa-eye'></i></div>"+
-                 "<div class='col-md-2 action check'><i class='fa fa-check-circle'></i></div>"+
+                 "</div><div class='col-md-2 action edit' onclick='editTodo("+todo.id+")'><i class='fa fa-pencil-square-o'></i></div>"+
+                 "<div class='col-md-2 action delete' onclick='editTodo("+todo.id+")'><i class='fa fa-remove'></i></div>"+
+                 "<div class='col-md-2 action check' onclick='cTodo("+todo.id+")'><i class='fa fa-check-circle'></i></div>"+
                  "</div></li>"
           // console.log(data);
 
