@@ -18,7 +18,7 @@ $( document ).ready(function() {
             				if (i === 8 || i === 12 || i === 16 || i === 20) {
             					uuid += '-';
             				}
-            				uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
+            				uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(5s);
             			}
                   console.log(uuid+ " Generated");
             			return uuid;
@@ -30,14 +30,16 @@ $( document ).ready(function() {
                     //Get Data
                      id = this.genId();
                      title = $('#todo-title').val();
-                     date = $('#todo-date').val();
+                     startDate = $('#todo-date1').val();
+                     stopDate = $('#todo-date2').val();
                      status = 'todo';
 
 
                      var element = {};
                      element.id = id;
                      element.title = title;
-                     element.date = date;
+                     element.StartDate = startDate;
+                     element.StartDate = stopDate;
                      element.status = status;
                      todoData.push(element);
 
@@ -89,13 +91,15 @@ $( document ).ready(function() {
         appendTodo : function(todo, status){
           //APPEND TO APPROPRIATE STATUS VIEW
           data = "<li><div class='row' id='"+todo.id+"'><div class='col-md-6 task'>"+
-                 todo.title+" <span class='label label-default'>"+todo.date+"</span>"+
-                 "</div><div class='col-md-2 action  edit'><i class='fa fa-pencil-square-o'></i></div>"+
-                 "<div class='col-md-2 action delete'><i class='fa fa-remove'></i></div>"+
+                 todo.title+" <span class='label label-default'>"+todo.date1+"</span> - "+
+                 "</div><div class='col-md-2 action edit'><i class='fa fa-pencil-square-o'></i></div>"+
+                 "<div class='col-md-2 action delete' ><i class='fa fa-remove'></i></div>"+
                  "<div class='col-md-2 action view'><i class='fa fa-eye'></i></div>"+
                  "<div class='col-md-2 action check'><i class='fa fa-check-circle'></i></div>"+
                  "</div></li>"
           // console.log(data);
+
+
 
           if(status  === "todo"){
               $('.todo-list').append(data);
@@ -114,7 +118,11 @@ $( document ).ready(function() {
                         var store = localStorage.getItem(namespace);
                         return (store && JSON.parse(store)) || [];
                   }
-          }
+          },
+
+        removeTodo: function(){
+
+        }
 
       }
 
