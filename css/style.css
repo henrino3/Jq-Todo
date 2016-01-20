@@ -1,0 +1,129 @@
+.container {
+  width: 100%;
+}
+
+.header{
+  padding: 30px;
+  border-bottom:  1px solid #000;
+}
+
+.logo{
+  width: 40px;
+  height: 40px;
+}
+
+.app-title{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px;
+  vertical-align: top;
+}
+
+.btn-add{
+      width: 100%;
+    }
+
+
+.main{
+  margin-top: 5px;
+}
+
+.col{
+  height: 500px;
+  width: 32%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  padding:0px;
+}
+
+
+.col-todo{
+  border:  1px solid #60554f;
+  margin-right: 25px;
+
+
+}
+
+.col-doing{
+  border:  1px solid #8c583c;
+  margin-right: 25px;
+
+}
+
+.col-done{
+  border:  1px solid #dd5409;
+
+}
+
+.head{
+  height: 65px;
+}
+
+.todo-head{
+  background: #60554f;
+}
+.doing-head{
+  background: #8c583c;
+}
+.done-head{
+  background: #dd5409;
+}
+
+.head-title{
+  margin:0px;
+  padding: 18px;
+  color: #fff;
+}
+
+.body ul{
+  list-style: none;
+  padding: 0px;
+  }
+
+.todo-list li{
+  border-bottom: 1px solid #000;
+  padding: 10px;
+
+}
+.todo-list li:hover{
+  padding: 15px;
+
+
+}
+
+.todo-list li:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.modal-header{
+  background: #428BCA;
+  color: #fff;
+}
+
+.todo-list .col-md-6{
+    width: 65%;
+
+}
+
+.todo-list .col-md-2{
+    width: 8%;
+
+}
+
+.task{
+  cursor: pointer;
+}
+
+.action{
+  cursor: pointer;
+  padding: 10px;
+}
+
+.action:hover{
+  color: #fff;
+
+  margin: 0px;
+  background: #60554F;
+}

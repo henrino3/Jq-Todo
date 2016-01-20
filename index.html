@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Simple Todo App! </title>
+
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+  <div class="col-md-10"><span id="two"></span></div>
+</div>
+
+    <div class="container">
+      <!-- HEADER -->
+        <div class="row header">
+          <div class="row">
+            <div class="col-md-10">
+
+              <span class="app-title"><i class="fa fa-list-alt fa-3"></i> SIMPLE TODO APP</span>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-lg btn-primary btn-add" data-toggle="modal" data-target="#myModal">ADD</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MAIN BODY -->
+        <div class="row main">
+          <div class="col-md-3 col col-todo">
+            <div class="head todo-head">
+              <h2 class="head-title">TODO</h2>
+            </div>
+            <div class="body">
+              <ul class="todo-list">
+
+
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-md-3 col col-doing">
+            <div class="head doing-head">
+              <h2 class="head-title">DOING</h2>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-3 col col-done">
+            <div class="head done-head">
+              <h2 class="head-title">DONE</h2>
+
+            </div>
+
+          </div>
+        </div>
+    </div><!-- /container -->
+
+
+    <!-- MODAL AVENUE -->
+
+    <!-- ADD TODO -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">ADD TODO</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <form class="">
+                  <label for="">Todo:</label><br>
+                  <input class="form-control" id="todo-title" name="name">
+                  <label for="">Date:</label><br>
+                  <input class="form-control" id="todo-date" name="name">
+                  <button class="btn btn-primary" id="add-todo" style="width:100%"> ADD</button>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+
+              <!-- LAYOUTS -->
+
+
+
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
