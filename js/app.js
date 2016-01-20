@@ -95,7 +95,7 @@ $( document ).ready(function() {
                  "<span class='label label-default'>"+todo.StopDate+"</span> "+
                  "</div><div class='col-md-2 action edit' onclick='editTodo("+todo.id+")'><i class='fa fa-pencil-square-o'></i></div>"+
                  "<div class='col-md-2 action delete' onclick='editTodo("+todo.id+")'><i class='fa fa-remove'></i></div>"+
-                 "<div class='col-md-2 action check' onclick='cTodo("+todo.id+")'><i class='fa fa-check-circle'></i></div>"+
+                 "<div class='col-md-2 action check' onclick='checkTodo("+todo.id+")'><i class='fa fa-check-circle'></i></div>"+
                  "</div></li>"
           // console.log(data);
 
