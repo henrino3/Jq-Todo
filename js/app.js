@@ -18,7 +18,7 @@ $( document ).ready(function() {
             				if (i === 8 || i === 12 || i === 16 || i === 20) {
             					uuid += '-';
             				}
-            				uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(5s);
+            				uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(5);
             			}
                   console.log(uuid+ " Generated");
             			return uuid;
@@ -39,7 +39,7 @@ $( document ).ready(function() {
                      element.id = id;
                      element.title = title;
                      element.StartDate = startDate;
-                     element.StartDate = stopDate;
+                     element.StopDate = stopDate;
                      element.status = status;
                      todoData.push(element);
 
@@ -91,7 +91,8 @@ $( document ).ready(function() {
         appendTodo : function(todo, status){
           //APPEND TO APPROPRIATE STATUS VIEW
           data = "<li><div class='row' id='"+todo.id+"'><div class='col-md-6 task'>"+
-                 todo.title+" <span class='label label-default'>"+todo.date1+"</span> - "+
+                 todo.title+" <span class='label label-default'>"+todo.StartDate+"</span> - "+
+                 "<span class='label label-default'>"+todo.StopDate+"</span> "+
                  "</div><div class='col-md-2 action edit'><i class='fa fa-pencil-square-o'></i></div>"+
                  "<div class='col-md-2 action delete' ><i class='fa fa-remove'></i></div>"+
                  "<div class='col-md-2 action view'><i class='fa fa-eye'></i></div>"+
@@ -142,6 +143,7 @@ $( document ).ready(function() {
         return false;
       });
 
-      $("#todo-date").datepicker();
+      $("#todo-date1").datepicker();
+      $("#todo-date2").datepicker();
 
 });
